@@ -1,4 +1,11 @@
-const ChuckInfo = () => {
+interface Info {
+	savedWhales: number;
+	roundhouseKiks : number
+}
+
+
+
+const ChuckInfo = (props : Info) => {
 
 	// 💡 note that this component uses an "explicit return"
 	// Compare to <ChuckCard/> which just returns the JSX directly like this:
@@ -18,9 +25,9 @@ const ChuckInfo = () => {
 
 	return (
 		<>
-			<p>Number of Whales Saved: </p>
+			<p>Number of Whales Saved: {props.savedWhales} </p>
 
-			<p>Number of Round House Kicks (in the last day): </p>
+			<p>Number of Round House Kicks (in the last day): {props.roundhouseKiks}</p>
 		</>);
 }
 
